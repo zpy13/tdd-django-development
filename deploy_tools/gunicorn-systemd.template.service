@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn server for yusutsu.xyz
+
+[Service]
+Restart=on-failure
+User=admin
+WorkingDirectory=/home/admin/sites/yusutsu.xyz/source
+ExecStart=/home/admin/sites/yusutsu.xyz/virtualenv/bin/gunicorn \
+	--bind unix:/tmp/yusutsu.xyz.socket \
+	superlists.wsgi:application
+[Install]
+WantedBy=multi-user.target
