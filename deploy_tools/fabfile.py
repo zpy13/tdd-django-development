@@ -25,7 +25,7 @@ def _create_directory_structure_if_necessary(site_folder):
 
 def _get_latest_source(source_folder):
     if exists(source_folder + '/.git'):
-        run(f'cd {source_folder} && git fetch')
+        run(f'cd {source_folder} && sudo git fetch')
     else:
         run(f'git clone {REPO_URL} {source_folder}')
     current_comment = local("git log -n 1 --format=%H", capture=True)
@@ -64,5 +64,6 @@ def _update_static_files(source_folder):
 def _update_database(source_folder):
     run(
         f'cd {source_folder}'
+        ' && ../virtualenv/bin/python manage.py makemigrations --noinput'
         ' && ../virtualenv/bin/python manage.py migrate --noinput'
     )
