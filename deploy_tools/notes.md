@@ -42,6 +42,9 @@ Assume we have a user account at /home/username
          ├── etc
 
 ## Notes
-When need to import reverse,do
+When you need to import reverse after django 2.0, do
 
     from django.urls import reverse
+Instead of do
+
+    from django.core.urlresolvers import reverse
