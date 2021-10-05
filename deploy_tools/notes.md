@@ -40,3 +40,8 @@ Assume we have a user account at /home/username
          ├── .env
          ├── db.sqlite3
          ├── etc
+
+## Notes
+When need to import reverse,do
+
+    from django.urls import reverse
