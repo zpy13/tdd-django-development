@@ -42,9 +42,14 @@ Assume we have a user account at /home/username
          ├── etc
 
 ## Notes
+###1.
 When you need to import reverse after django 2.0, do
 
     from django.urls import reverse
 Instead of do
 
     from django.core.urlresolvers import reverse
+###2.
+You need to delete migrations, collect static files and restart gunicorn 
+service manually for deployment.
+
