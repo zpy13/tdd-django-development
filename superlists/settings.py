@@ -128,12 +128,6 @@ STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR,'../static'))
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# EMAIL_HOST = 'smtp.126.com'
-# EMAIL_HOST_USER = 'azqmko@126.com'
-# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-
 AUTH_USER_MODEL = 'accounts.User'
 
 AUTHENTICATION_BACKENDS = [
