@@ -58,5 +58,8 @@ In accounts.views.send_mail, qq email's name cannot be changed.
 In accounts.authentication.PasswordlessAuthenticationBackend.authenticate(),
 add request to definition after django 2.1.
 
-Reference:
 https://stackoverflow.com/questions/53020872/django-2-1-2-backend-authentication-fails/54708703
+###5.
+Clean migrations and database.
+
+https://stackoverflow.com/questions/33086444/django-1-8-migrate-is-not-creating-tables
