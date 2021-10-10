@@ -16,7 +16,8 @@ def send_login_email(request):
     send_mail(
         'Your login link for Superlists',
         message_body,
-        'noreply@superlists',
+        # 'noreply@superlists',
+        '1463111297@qq.com',
         [email]
     )
     messages.success(
@@ -27,7 +28,8 @@ def send_login_email(request):
 
 
 def login(request):
-    user = auth.authenticate(uid=request.GET.get('token'))
+    user = auth.authenticate(request, uid=request.GET.get('token'))
     if user:
         auth.login(request, user)
+
     return redirect('/')
