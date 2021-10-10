@@ -52,4 +52,11 @@ Instead of do
 ###2.
 You need to delete migrations, collect static files and restart gunicorn 
 service manually for deployment.
+###3.
+In accounts.views.send_mail, qq email's name cannot be changed.
+###4.
+In accounts.authentication.PasswordlessAuthenticationBackend.authenticate(),
+add request to definition after django 2.1.
 
+Reference:
+https://stackoverflow.com/questions/53020872/django-2-1-2-backend-authentication-fails/54708703
