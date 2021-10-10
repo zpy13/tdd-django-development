@@ -43,12 +43,14 @@ Assume we have a user account at /home/username
 
 ## Notes
 ###1.
-When you need to import reverse after django 2.0, do
+When you need to import listed methods after django 2.0, do
 
     from django.urls import reverse
-Instead of do
+    from django.contrib.auth.views import logout_then_login
+Instead, do
 
     from django.core.urlresolvers import reverse
+    from django.contrib.auth.views import logout
 ###2.
 You need to delete migrations, collect static files and restart gunicorn 
 service manually for deployment.
