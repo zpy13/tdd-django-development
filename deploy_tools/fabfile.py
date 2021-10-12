@@ -64,6 +64,6 @@ def _update_static_files(source_folder):
 def _update_database(source_folder):
     run(
         f'cd {source_folder}'
-        ' && ../virtualenv/bin/python manage.py makemigrations --noinput'
+        ' && sudo ../virtualenv/bin/python manage.py makemigrations --noinput'
         ' && ../virtualenv/bin/python manage.py migrate --noinput'
     )

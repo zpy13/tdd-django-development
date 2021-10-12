@@ -3,7 +3,7 @@ from django.contrib import auth
 import uuid
 # Create your models here.
 
-# auth.signals.user_logged_in.disconnect(auth.models.update_last_login)
+auth.signals.user_logged_in.disconnect(auth.models.update_last_login)
 
 
 class User(models.Model):
